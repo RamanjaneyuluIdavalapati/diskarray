@@ -14,7 +14,6 @@ class DiskVarArray(object):
             GROWBY, log=Logger):
         '''
         >>> import numpy as np
-        >>> from diskarray import DiskVarArray
         >>> d = DiskVarArray('/tmp/test1', dtype='uint32')
         >>> d # doctest:+ELLIPSIS
         <diskarray.vararray.DiskVarArray object at 0x...>
@@ -59,7 +58,7 @@ class DiskVarArray(object):
         >>> import numpy as np
         >>> d = DiskVarArray('/tmp/test1', dtype='uint32')
         >>> d.dtype_index
-        <class 'numpy.uint64'>
+        <type 'numpy.uint64'>
         >>> shutil.rmtree('/tmp/test1', ignore_errors=True)
         '''
         return self._dtype_index
